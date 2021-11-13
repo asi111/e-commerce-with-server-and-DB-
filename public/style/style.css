@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+header {
+  background-image: url("https://media.istockphoto.com/vectors/streaming-movie-illustration-vector-vector-id1225052430?k=20&m=1225052430&s=612x612&w=0&h=GXaRDisJ_9Bn0ym0_S92o25XgAEp060W_dsX-XZvxHY=");
+  height: 100px;
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+nav li span {
+  padding-left: 5px;
+}
+
+li a {
+  padding: 5px;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width:648px) {
+  nav {
+   
+    top:-50px
+  }
+
+  nav li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.principal {
+  border: 5px solid #fff;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.principal h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.shopBtn {
+  width: 300px;
+  height: 100px;
+  border: 5px solid white;
+  cursor: pointer;
+}
+
+.backImg {
+  background-image: url("https://media.istockphoto.com/vectors/streaming-movie-illustration-vector-vector-id1225052430?k=20&m=1225052430&s=612x612&w=0&h=GXaRDisJ_9Bn0ym0_S92o25XgAEp060W_dsX-XZvxHY=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+
+#categoryTitle{
+  background-color: khaki;
+ margin-left:0;
+ height: 20vh;
+ padding-top: 5px;
+ padding-left: 35%;
+ font-weight: bold;
+ font-size: 50px;
+ color:#000;
+}
+
+h2{
+  color: blue;
+}
+
+.Categories {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+
+.img {
+  width: 200px;
+}
+
+h4 {
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+
+footer {
+  border: 0.1rem #000 solid;
+  border-left: 0;
+  border-right: 0;
+
+  text-align: center;
+  font-size: 1.3vw;
+
+  margin: 1vw 1.2vw;
+}
+
+.cells {
+  display: inline-block;
+  border-right: 1vh #000 solid;
+
+  text-align: center;
+
+  padding: 0vw 0.5vw;
+  margin: 0.5vw;
+}
+
+p:last-child {
+  border-right: 0;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,42 @@
+GET http://localhost:8080/products
+###
+
+GET http://localhost:8080/contact
+###
+
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+     "id": 200,
+    "Name": "samsung22",
+    "price": 99,
+   "category":"mobile",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit",
+    "image": [
+      "https://media.istockphoto.com/photos/samsung-i9300-galaxy-siii-isolated-on-white-picture-id458945787?k=20&m=458945787&s=612x612&w=0&h=XwvEs12mMk60l8jhiPKPISvG51rozPMkvL01Nxg55EA=",
+      "https://media.istockphoto.com/photos/samsung-galaxy-s6-edge-picture-id482359074?k=20&m=482359074&s=612x612&w=0&h=AUOJjNbrc0NvCduTOG2Lk7PleWx36Q1y_dZX9F24gn4="
+    ]
+    
+}
+
+### 
+
+PATCH  http://localhost:8080/products/6182be458ae7bd7970e56f53
+Content-Type: application/json
+
+{
+    "id":1,
+    "Name": "samsung 1",
+    "price":99,
+    "category": "Tv",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit",
+    "image": [
+      "https://media.istockphoto.com/photos/samsung-smart-tv-logo-picture-id483551726?k=20&m=483551726&s=612x612&w=0&h=2j_irOxDu7Tf2ECg_c9l8wUB16huRYVnzbZH1sW98xo=",
+      "https://media.istockphoto.com/photos/samsung-smart-tv-and-social-media-picture-id483575898?k=20&m=483575898&s=612x612&w=0&h=SK_IcNHWuNAaC78cXBvtVoS5nWyuxcHFPjbGfx5eA7Q="
+    ]
+  
+}
+###
+
+DELETE http://localhost:8080/carts/618913461d2acd229250e769

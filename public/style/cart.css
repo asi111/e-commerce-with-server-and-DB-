@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto", sans-serif;
+  }
+  
+  header{
+      background-image: url("https://media.istockphoto.com/vectors/streaming-movie-illustration-vector-vector-id1225052430?k=20&m=1225052430&s=612x612&w=0&h=GXaRDisJ_9Bn0ym0_S92o25XgAEp060W_dsX-XZvxHY=");
+      height:200px; 
+      position: relative;
+  }
+  
+  nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+  }
+  
+  nav li {
+      list-style: none;
+      display:inline-block;
+      padding-right: 10px;
+      padding-left: 10px;
+      
+  
+  }
+  
+  nav li span{
+      padding-left: 5px;
+  
+  }
+  
+  li a{
+      padding: 5px;
+      background-color: #fff;
+      text-decoration: none;
+  }
+
+#tbContainer{ 
+    
+    width:50%;
+    height:50vh;
+    border-collapse: collapse;
+    background:white;
+    border-radius: 10px;
+    border: solid ;
+    /* margin-left:25%;
+    margin-top: 5%; */
+}
+
+.tb_cart{ 
+    border-radius: 10px;
+    border: solid #000; 
+   text-align: center;
+}
+
+
+.img{
+    width: 150px;
+   
+}
+
+#table{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items:center;
+    
+}
+
+
+    
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+
+footer {
+    border: 0.1rem #000 solid;
+    border-left: 0;
+    border-right: 0;
+    
+    text-align: center;
+    font-size: 1.3vw; 
+    
+    margin: 1vw 1.2vw;
+}
+
+.cells {
+    display: inline-block;
+    border-right: 1vh #000 solid;
+    
+    text-align: center;
+
+    
+    padding: 0vw 0.5vw;
+    margin: 0.5vw;
+}
+
+p:last-child {
+  border-right: 0;
+}
+
+a { text-decoration: none;}
