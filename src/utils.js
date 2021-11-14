@@ -2,13 +2,13 @@ require("dotenv").config()
 const mongo = require("mongodb"),
   MongoClient = mongo.MongoClient,
   objectID = mongo.ObjectId,
-  url = "mongodb://localhost:27017"
+  url = process.env.MONGOURL 
   Products = require("../public/js/main"),
   dbName = "eCommerce",
   productsCol = "products";
   contactColl = "contact";
   cartTColl = "carts";
-  // process.env.MONGOURL,
+  // || "mongodb://localhost:27017"
 // console.log(Products);
 
 
