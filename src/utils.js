@@ -2,8 +2,7 @@ require("dotenv").config()
 const mongo = require("mongodb"),
   MongoClient = mongo.MongoClient,
   objectID = mongo.ObjectId,
-  url = process.env.MONGOURL
-  console.log(url);
+  url = process.env.MONGOURL,
   Products = require("../public/js/main"),
   dbName = "eCommerce",
   productsCol = "products";
