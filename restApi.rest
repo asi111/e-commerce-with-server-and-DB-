@@ -39,4 +39,4 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:8080/carts/618913461d2acd229250e769
+DELETE http://localhost:8080/product/pc/61910ed1217157eed1132bcf

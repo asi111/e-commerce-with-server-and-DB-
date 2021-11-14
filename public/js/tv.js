@@ -21,8 +21,9 @@ axios.get("/products/Tv")
             <span class="description">description: ${Electronics[i].description}</span><br>
             <img src="${Electronics[i].image[0]}" >
             <img src="${Electronics[i].image[1]}" >
-            <button type="button" onclick= "findOne('${Electronics[i]._id}')">add item</button><br>
+            <button type="button" onclick= "findAndAddToCart('${Electronics[i]._id}')">add item</button><br>
             <form method="get" action="update.html"><button class=""btnUpdate" type="submit" name="id" value="${Electronics[i]._id}">update</button>
+            <button type="button" onclick= "deleteProductById('${Electronics[i]._id}')">delete</button><br>
 
             </article>`
         
@@ -35,7 +36,7 @@ axios.get("/products/Tv")
   })
 
   
-function findOne(id) {
+function findAndAddToCart(id) {
   axios
     .get(`/cart/findProduct/${id}`, {
      
@@ -69,3 +70,17 @@ function addToCart(res) {
 
 
  
+function deleteProductById(id) {
+ 
+  axios
+    .delete(`/product/pc/${id}`, {
+    
+    })
+    .then(function (response) {
+      
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}

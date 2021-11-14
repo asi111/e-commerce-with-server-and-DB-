@@ -1,0 +1,42 @@
+
+.formnow{
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+   text-align: center;
+     }
+  
+     input[type=text]{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: none;
+        outline-style:solid;}
+
+        input[type="submit"]{
+            width: 110%;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: black;
+            color: #fff;
+            border: 1px solid;
+            border-radius: 25px;
+            cursor: pointer;}
+
+  input[type=email]{
+  width: 100%;
+   padding: 10px 20px;
+   margin: 10px 0;
+   border: none;
+  outline-style:solid;}
+
+    input[type=date]{
+     width: 100%;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border: none;
+        outline-style:solid;} 

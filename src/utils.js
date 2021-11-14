@@ -2,14 +2,15 @@ require("dotenv").config()
 const mongo = require("mongodb"),
   MongoClient = mongo.MongoClient,
   objectID = mongo.ObjectId,
-  url = process.env.MONGOURL,
+  url = "mongodb://localhost:27017"
   Products = require("../public/js/main"),
   dbName = "eCommerce",
   productsCol = "products";
   contactColl = "contact";
   cartTColl = "carts";
+  // process.env.MONGOURL,
 // console.log(Products);
-// || "mongodb://localhost:27017"
+
 
 // // console.log( Products);
 // MongoClient.connect(url, function(err, db) {
@@ -150,8 +151,8 @@ function deleteProductById(req, res) {
     if (err) throw err;
     const dbo = db.db(dbName);
     dbo
-      .collection( cartTColl )
-      .deleteOne({ _id: objectID(req.params.id) }, (err, result) => {
+      .collection(productsCol)
+      .deleteOne({_id: objectID(req.params.id)}, (err, result) => {
         if (err) throw err;
         res.send(result);
         console.log(result);
@@ -167,7 +168,7 @@ function pushToCart(req,res) {
   const dbo = db.db(dbName);
 
   const body = req.body
-  const cartId = {_id: objectID("6190a7eb2794f698f3c4dc97") }
+  const cartId = {_id: objectID("6189309e6bbf0855edd17f37") }
 
   dbo.collection(cartTColl).updateOne(cartId,{ $push:{products:body} },
     (err, coll) => {
@@ -189,7 +190,7 @@ function deleteFromCart(req,res) {
   let id = req.params.id
   let _id = {_id:id}
   console.log( _id );
-  const cartId = {_id: objectID("6190a7eb2794f698f3c4dc97") }
+  const cartId = {_id: objectID("6189309e6bbf0855edd17f37") }
 
   dbo.collection(cartTColl).findOneAndUpdate(cartId,{ $pull:{products:_id}},
     (err, product) => {

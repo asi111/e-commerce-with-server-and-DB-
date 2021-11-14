@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express"),
   axios = require("axios"),
    app = express(),
-  PORT = process.env.PORT,
+  PORT = process.env.PORT || 8080,
   path = require("path"),
   publicPatch = path.join(__dirname, "..", "public"),
   {
@@ -91,10 +91,12 @@ app.patch("/products/update/:id", (req, res) => {
   updateProductById(req, res);
 });
 
-app.delete("/carts/:id", (req, res) => {
+app.delete("/product/pc/:id", (req, res) => {
   deleteProductById(req, res);
 });
 
 app.listen(PORT, () => {
   console.log(`app listening to ${PORT}`);
 });
+
+
