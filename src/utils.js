@@ -2,15 +2,16 @@ require("dotenv").config()
 const mongo = require("mongodb"),
   MongoClient = mongo.MongoClient,
   objectID = mongo.ObjectId,
-  url = "mongodb://localhost:27017"
+  url = process.env.MONGOURL
+  console.log(url);
   Products = require("../public/js/main"),
   dbName = "eCommerce",
   productsCol = "products";
   contactColl = "contact";
   cartTColl = "carts";
 // console.log(Products);
+// || "mongodb://localhost:27017"
 
-// process.env.MONGOURL ||
 // // console.log( Products);
 // MongoClient.connect(url, function(err, db) {
 //           // const body = req.body
@@ -25,8 +26,8 @@ const mongo = require("mongodb"),
 
 // MongoClient.connect(url, function (err, db) {
 //   if (err) throw err;
-//   var dbo = db.db("test");
-//   dbo.createCollection("test1", function (err, res) {
+//   var dbo = db.db(dbName);
+//   dbo.createCollection("contact", function (err, res) {
 //     if (err) throw err;
 //     console.log("Collection created!");
 //     //   db.close();
